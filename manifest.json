@@ -1,0 +1,36 @@
+{
+  "name": "ff-shortcuts",
+  "description": "Press Ctrl+Shift+Right (or left) to send an event (Command+Shift+Right on a Mac).",
+  "homepage_url": "https://github.com/tpiron/ff-shortcuts",
+  "manifest_version": 2,
+  "version": "1.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "commands-demo@mozilla.org",
+      "strict_min_version": "60.0b5"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "commands": {
+    "next-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Right"
+      },
+      "description": "Send a 'next-tab' event to the extension"
+    },
+    "previous-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Left"
+      },
+      "description": "Send a 'previous-tab' event to the extension"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  }
+}
